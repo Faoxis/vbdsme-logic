@@ -19,3 +19,22 @@ CREATE TABLE IF NOT EXISTS item_category (
   category_id INTEGER REFERENCES category (id)
 );
 
+
+--- seeds ----
+INSERT INTO item(name, quantity, price) VALUES ('Белый друг Extra Super', 5, 500000);
+INSERT INTO item(name, quantity, price) VALUES ('Черный друг Ultra Extra Super', 5, 700000);
+INSERT INTO item(name, quantity, price) VALUES ('Сразу два друга Lux', 1, 1000000);
+
+INSERT INTO item(name, quantity, price) VALUES ('Супер подружка-2000', 5, 500000);
+INSERT INTO item(name, quantity, price) VALUES ('Фронтовая часть-8000', 3, 1200000);
+INSERT INTO item(name, quantity, price) VALUES ('Бэковая часть-8000', 3, 1200000);
+
+INSERT INTO item(name, quantity, price) VALUES ('Плеть унижения', 10, 200000);
+INSERT INTO item(name, quantity, price) VALUES ('Ротозатыкалка Криминальное чтиво', 10, 300000);
+INSERT INTO item(name, quantity, price) VALUES ('Кожаные штаны из плохого разработчика', 1, 5000000);
+
+
+INSERT INTO category(name) VALUES ('Для нее');
+INSERT INTO category(name) VALUES ('Для него');
+INSERT INTO category(name) VALUES ('БДСМ для всех');
+
