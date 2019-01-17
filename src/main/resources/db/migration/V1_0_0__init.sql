@@ -30,11 +30,23 @@ INSERT INTO item(name, quantity, price) VALUES ('Фронтовая часть-8
 INSERT INTO item(name, quantity, price) VALUES ('Бэковая часть-8000', 3, 1200000);
 
 INSERT INTO item(name, quantity, price) VALUES ('Плеть унижения', 10, 200000);
-INSERT INTO item(name, quantity, price) VALUES ('Ротозатыкалка Криминальное чтиво', 10, 300000);
 INSERT INTO item(name, quantity, price) VALUES ('Кожаные штаны из плохого разработчика', 1, 5000000);
 
 
 INSERT INTO category(name) VALUES ('Для нее');
 INSERT INTO category(name) VALUES ('Для него');
 INSERT INTO category(name) VALUES ('БДСМ для всех');
+
+
+INSERT INTO item_category VALUES (1, 1);
+INSERT INTO item_category VALUES (2, 1);
+INSERT INTO item_category VALUES (3, 1);
+INSERT INTO item_category VALUES (4, 2);
+INSERT INTO item_category VALUES (5, 2);
+INSERT INTO item_category VALUES (6, 2);
+INSERT INTO item_category VALUES (7, 3);
+INSERT INTO item_category VALUES (8, 3);
+
+
+
 
