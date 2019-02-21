@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.vbdsme.vbdsmelogic.domain.Category;
 import ru.vbdsme.vbdsmelogic.exception.CategoryAlreadyExistsException;
+import ru.vbdsme.vbdsmelogic.exception.ThereNoCategoryException;
 import ru.vbdsme.vbdsmelogic.repository.CategoryRepository;
 
 import java.util.List;
@@ -27,5 +28,12 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public List<Category> getAll() {
         return repository.findAll();
+    }
+
+    @Override
+    public Category getByName(String name) {
+        return repository
+                .findByName(name)
+                .orElseThrow(ThereNoCategoryException::new);
     }
 }

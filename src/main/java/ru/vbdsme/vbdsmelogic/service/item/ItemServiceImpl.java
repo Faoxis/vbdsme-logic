@@ -8,6 +8,7 @@ import ru.vbdsme.vbdsmelogic.exception.ItemAlreadyExistsException;
 import ru.vbdsme.vbdsmelogic.exception.ThereNoCategoryException;
 import ru.vbdsme.vbdsmelogic.repository.CategoryRepository;
 import ru.vbdsme.vbdsmelogic.repository.ItemRepository;
+import ru.vbdsme.vbdsmelogic.service.category.CategoryService;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import java.util.stream.Collectors;
 public class ItemServiceImpl implements ItemService {
 
     private ItemRepository itemRepository;
-    private CategoryRepository categoryRepository;
+    private CategoryService categoryService;
 
     @Override
     public Item save(Item item) {
@@ -30,8 +31,7 @@ public class ItemServiceImpl implements ItemService {
                 .getCategories()
                 .stream()
                 .parallel()
-                .map(category -> categoryRepository.findByName(category.getName()))
-                .map(optionalCategory -> optionalCategory.orElseThrow(ThereNoCategoryException::new))
+                .map(category -> categoryService.getByName(category.getName()))
                 .collect(Collectors.toSet())
         );
 

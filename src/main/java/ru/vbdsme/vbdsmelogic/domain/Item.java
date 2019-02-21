@@ -2,18 +2,18 @@ package ru.vbdsme.vbdsmelogic.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 import javax.persistence.*;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.time.LocalDateTime;
+import javax.validation.constraints.*;
 import java.util.Set;
 
 @Data
 @Entity
+@Accessors(chain = true)
 public class Item {
 
     @Id

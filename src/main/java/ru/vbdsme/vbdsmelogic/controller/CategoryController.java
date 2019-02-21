@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 public class CategoryController {
-    public final String URL = "/categories";
+    public static final String URL = "/categories";
 
     private CategoryService categoryService;
 

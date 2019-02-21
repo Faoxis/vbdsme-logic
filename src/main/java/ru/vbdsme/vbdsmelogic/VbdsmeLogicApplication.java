@@ -10,5 +10,6 @@ public class VbdsmeLogicApplication {
 		SpringApplication.run(VbdsmeLogicApplication.class, args);
 	}
 
+
 }
 
