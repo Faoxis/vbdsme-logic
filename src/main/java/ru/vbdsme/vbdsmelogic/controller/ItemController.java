@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 public class ItemController {
-    public final String URL = "/items";
+    public static final String URL = "/items";
 
     private ItemService itemService;
 

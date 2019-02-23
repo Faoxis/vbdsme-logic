@@ -7,7 +7,6 @@ import ru.vbdsme.vbdsmelogic.exception.CategoryAlreadyExistsException;
 import ru.vbdsme.vbdsmelogic.exception.ThereNoCategoryException;
 import ru.vbdsme.vbdsmelogic.repository.CategoryRepository;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;

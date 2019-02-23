@@ -56,10 +56,8 @@ public class ItemServiceImplTest {
     public void testSuccessSave() {
         testedItem
                 .getCategories()
-                .forEach(category -> {
-                    when(categoryService.getByName(category.getName()))
-                            .thenReturn(category);
-                });
+                .forEach(category -> when(categoryService.getByName(category.getName()))
+                        .thenReturn(category));
 
         itemService.save(testedItem);
         verify(itemRepository, times(1))
